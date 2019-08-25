@@ -1,3 +1,5 @@
+#-*- coding:UTF-8 -*-
+
 import pandas as pd
 import telnetlib
 import sys
@@ -12,9 +14,9 @@ from email.mime.application import MIMEApplication
 class Telnet(telnetlib.Telnet, object):
     if sys.version > '3':
         def read_until(self, expected, timeout=3):
-            expected = bytes(expected, encoding='utf-8')
+            expected = bytes(expected, encoding = 'utf-8')
             received = super(Telnet, self).read_until(expected, timeout)
-            return str(received, encoding='ms949', errors='ignore')
+            return str(received, encoding = 'ms949', errors='ignore')
 
         def write(self, buffer):
             buffer = bytes(buffer, encoding='utf-8')

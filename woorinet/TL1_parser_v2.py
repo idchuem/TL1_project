@@ -1,7 +1,8 @@
+#-*- coding:UTF-8 -*-
+
 import pandas as pd
 import telnetlib
 import sys
-
 
 class Telnet(telnetlib.Telnet, object):
     if sys.version > '3':
@@ -376,7 +377,7 @@ if __name__ == '__main__':
         #모델명 조회
         model=woorinet.get_model(IP[i],telnet)
         MODEL.append(model)
-
+        """
         # Low Order 용량 조회
         val = woorinet.get_lowcapa(IP[i], telnet)
         val = val.split(',')
@@ -411,7 +412,7 @@ if __name__ == '__main__':
         # MSSPR FAIL 조회
         val = woorinet.get_mssprfailure(IP[i], telnet)
         MSSPRFAIL.append(val)
-
+        """
     result = {'노드명': TID, '모델명':MODEL, 'NE_IP': NEIP, 'NE_ID': NEID, '설치위치': Location, 'AU4사용율': AU3Usage, 'AU3사용율': AU4Usage, 'Working MCU': SLOT,
               'MCU버전': VER,
               '클럭원 1': PRVCLK1, '클럭원 2': PRVCLK2, '현재 클럭원': CURCLK ,'클럭원 품질':CLKSSM,'클럭원 설정품질':CLKSSMPRV, '유도 클럭원': CLKCUR ,'유도 클럭품질' : CLKSSM, 'MSP 절체불가': SWFAIL,
