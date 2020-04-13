@@ -16,4 +16,4 @@ N/A
 Kyung Jun, Cho <idchuem@gmail.com>
 
 # copyright and license
-(c) Copyright 1997-2019 by SK broaband Co., LTD
+(c) Copyright 1997-2019 by 
